@@ -1,0 +1,168 @@
+
+<html>
+<head>
+<style>
+.abc{
+border:2px solid green;
+width:100px;
+}
+.ab{
+text-align:center; 
+display:inline-block;
+border:2px solid green;
+width:200px;
+height:150px;
+line-height:50px;
+}
+
+
+.wah {margin-top:12px;}
+.wahmain{
+position:relative;
+top:48px;
+
+}
+
+</style>
+
+
+
+</head>
+<body>
+<h2>changing css</h2>
+<div class="abc">
+<script>
+
+</script>
+<button onclick="CE();">create Element</button>
+<script>
+function CE(){
+var div=document.createElement("div");
+div.id="child";
+div.style.width="100px";
+div.style.height="100px";
+div.style.border="3px solid purple";
+div.style.margin="50px auto auto auto";
+div.textContent="";
+document.body.appendChild(div);
+}
+</script>
+</div>
+<div class="ab">
+<button onclick="moveup();">MOVEUP</button>
+<script>
+var Goup=0;
+function moveup(){
+Goup=Goup+10;
+var child=document.getElementById("child");
+child.style.transform="translateY(-"+Goup+"px)";
+}
+</script>
+<button onclick="movedown();">MOVEDOWN</button>
+<script>
+var Godown=0;
+function movedown(){
+Godown=Godown+10;
+var child=document.getElementById("child");
+child.style.transform="translateY("+Godown+"px)";
+}
+</script>
+<button onclick="moveleft();">MOVELEFT</button>
+<script>
+var Goleft=0;
+function moveleft(){
+Goleft=Goleft+10;
+var child=document.getElementById("child");
+child.style.transform="translateX(-"+Goleft+"px)";
+}
+</script>
+<button onclick="moveright();">MOVERIGHT</button></br>
+<script>
+var Goright=0;
+function moveright(){
+Goright=Goright+10;
+var child=document.getElementById("child");
+child.style.transform="translateX("+Goright+"px)";
+}
+</script>
+</div>
+<div class="ab wahmain">
+<button class="wah" onclick="increase();"> Width INCREASE</button>
+<script>
+var inc=200;
+function increase(){
+inc=inc+10;
+var child=document.getElementById("child");
+child.style.width=inc+"px";
+}
+</script>
+<button class="wah"  onclick="decrease();"> Width DECREASE</button>
+
+<script>
+var dec=200;
+function decrease(){
+dec=dec-10;
+var child=document.getElementById("child");
+child.style.width=dec+"px";
+}
+</script>
+<button class="wah"  onclick="heightincrease();"> Height INCREASE</button>
+<script>
+var hinc=200;
+function heightincrease(){
+hinc=hinc+10;
+var child=document.getElementById("child");
+child.style.height= hinc+"px";
+}
+</script>
+<button class="wah"  onclick="heightdecrease();">Height DECREASE</button>
+<script>
+var hdec=200;
+function heightdecrease(){
+hdec=hdec-10;
+var child=document.getElementById("child");
+child.style.height=hdec+"px";
+}
+</script>
+</div>
+
+<div class="ab">
+<button onclick="topleft();">Top left</button>
+<script>
+var tleft=0;
+function topleft(){
+tleft=tleft+10;
+var child=document.getElementById("child");
+child.style.borderTopLeftRadius=tleft+"%";
+}
+</script>
+<button onclick="topright();">Top RIGHT</button>
+<script>
+var tright=0;
+function topright(){
+tright=tright+10;
+var child=document.getElementById("child");
+child.style.borderTopRightRadius=tright+"%";
+}
+</script>
+<button onclick="bottomleft();"> buttom Left </button>
+<script>
+var bleft=0;
+function bottomleft(){
+bleft=bleft+10;
+var child=document.getElementById("child");
+child.style.borderBottomLeftRadius=bleft+"%";
+}
+</script>
+<button onclick="bottomright();">buttom Right </button>
+<script>
+var bright=0;
+function bottomright(){
+bright=bright+10;
+var child=document.getElementById("child");
+child.style.borderBottomRightRadius=bright+"%";
+}
+</script>
+</div>
+</body>
+</html>
